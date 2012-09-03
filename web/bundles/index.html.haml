@@ -3,24 +3,33 @@ title: News
 layout: default
 ---
 
-%h1 Bundles > General
+%h1
+  Bundles >  
+  %a{:href=>"../bundles"} General
 
 All skysail bundles share the same layout:
 
 %p 
   %h2 src/main/java
+  
+  Java source files, typically in packages starting with "de.twenty11.[symbolic name]".
 
 %p 
-  %h2 src/main/resource
+  %h2 
+    %a{:href=>"src_main_resources.html"} src/main/resources
   
 %p 
   %h2 src/test/java
   
 %p 
-  %h2 src/test/resource
+  %h2 
+    %a{:href=>"src_test_resources.html"} src/test/resources
   
 %p
-  %h2 osgi.bnd
+  %h2
+    %a{:href=>"bnd.html"} osgi.bnd
+  
+  this file instructs the maven bundle plugin with details about the OSGi build process.
   
 %p
   %h2 
