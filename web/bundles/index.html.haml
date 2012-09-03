@@ -1,0 +1,32 @@
+---
+title: News
+layout: default
+---
+
+%h1 Bundles > General
+
+All skysail bundles share the same layout:
+
+%p 
+  %h2 src/main/java
+
+%p 
+  %h2 src/main/resource
+  
+%p 
+  %h2 src/test/java
+  
+%p 
+  %h2 src/test/resource
+  
+%p
+  %h2 osgi.bnd
+  
+%p
+  %h2 
+    %a{:href=>"pom.html"} pom.xml
+  
+  skysail bundles are build using 
+  %a{:href=>"http://maven.apache.org", :target=>"_blank"} maven 3
+  ; everything maven needs to know about the project
+  is defined in this file. To install the projects, simply type "mvn clean install".
