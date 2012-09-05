@@ -48,44 +48,40 @@
     </div>
     <div class='container'>
       <h1>
-        Bundles >
-        <a href='../bundles'>General</a>
-      </h1>
-      All skysail bundles share the same layout:
+  Bundles >
+  <a href='../bundles'>General ></a>
+  src/test/java
+</h1>
+There are unit tests and integration tests
+<p></p>
+<p>
+  Unit tests:
+</p>
+<div class='row'>
+  <div class='span12'>
+    <div class='well'>
       <p>
-        <h2>src/main/java</h2>
-        Java source files, typically in packages starting with "de.twenty11.[symbolic name]".
+        Here you will find the typical unit tests used to make sure that your "units of work" to what they
+        should. This is not different from any other java project setup.
       </p>
+    </div>
+  </div>
+</div>
+<p>
+  Integration tests:
+</p>
+<div class='row'>
+  <div class='span12'>
+    <div class='well'>
+      <h2>
+        exam.properties
+      </h2>
       <p>
-        <h2>
-          <a href='src_main_resources.html'>src/main/resources</a>
-        </h2>
+        <pre><code>### what is this file for? see AbstractFrameworkIntegrationSetup or http://team.ops4j.org/wiki/display/paxexam/Configuration&#x000A;pax.exam.system=default&#x000A;</code></pre>
       </p>
-      <p>
-        <h2>
-          <a href='src_test_java.html'>src/test/java</a>
-        </h2>
-      </p>
-      <p>
-        <h2>
-          <a href='src_test_resources.html'>src/test/resources</a>
-        </h2>
-      </p>
-      <p>
-        <h2>
-          <a href='bnd.html'>osgi.bnd</a>
-        </h2>
-        this file instructs the maven bundle plugin with details about the OSGi build process.
-      </p>
-      <p>
-        <h2>
-          <a href='pom.html'>pom.xml</a>
-        </h2>
-        skysail bundles are build using
-        <a href='http://maven.apache.org' target='_blank'>maven 3</a>
-        ; everything maven needs to know about the project
-        is defined in this file. To install the projects, simply type "mvn clean install".
-      </p>
+    </div>
+  </div>
+</div>
       <hr />
       <footer>
         <p>&copy; skysail 2012</p>
