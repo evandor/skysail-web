@@ -1,0 +1,69 @@
+---
+title: News
+layout: default
+---
+
+%h1
+  %a{:href=>"../"} Bundles >  
+  Skysail Server Extension DbViewer
+
+%p
+  This server extension provides functionality to manage database connections and to access (view for now)
+  the stored data. As usual, as a server extension, it provides a restful interface, communication via JSON.
+
+%h2
+  URIs of the Resources
+
+%p 
+  Assuming that our application is hosted locally and is listening to port 8554:
+
+%table{:border => 1, :width => "100%"}
+  %tr{:style => "background-color:#cccccc"}
+    %th{:width => "350"} URI
+    %th.edit Description
+  %tr 
+    %td 
+      http://localhost:8554<b>/dbviewer/</b>
+    %td URI of the <font color="red">"connections"</font> resource (base resource for dbviewer)
+  %tr 
+    %td http://localhost:8554<b>/dbviewer/{connectionId}</b>
+    %td URI of the <font color="green">"connection"</font> resource where {connectionId} represents the identifier of a connection
+  %tr 
+    %td http://localhost:8554<b>/dbviewer/{connectionId}/data</b>
+    %td URI of the "data" resource
+
+%br
+%h2 Methods applied on each resource
+
+%table{:border => 1, :width => "100%"}
+  %tr{:style => "background-color:#cccccc"}
+    %th{:width => "100"} Resource
+    %th.edit Method
+    %th.edit Description
+    %th{:width => "50"} Status
+  %tr 
+    %td <font color="red">connections</font>
+    %td GET
+    %td Lists the current connections.
+    %td done
+  %tr 
+    %td <font color="red">connections</font>
+    %td POST
+    %td Creates a new user according to the data sent in the provided JSON request.
+    %td wip
+  %tr 
+    %td <font color="green">connection</font>
+    %td GET
+    %td Provides a representation of the connection.
+    %td done
+  %tr 
+    %td <font color="green">connection</font>
+    %td PUT
+    %td Updates the current connection with a new set of properties.
+    %td wip
+  %tr 
+    %td <font color="green">connection</font>
+    %td DELETE
+    %td Deletes the current connection.
+    %td done
+
