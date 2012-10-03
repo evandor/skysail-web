@@ -19,18 +19,27 @@ layout: default
 
 %table{:border => 1, :width => "100%"}
   %tr{:style => "background-color:#cccccc"}
-    %th{:width => "350"} URI
+    %th{:width => "450"} URI
     %th.edit Description
   %tr 
     %td 
-      http://localhost:8554<b>/dbviewer/</b>
-    %td URI of the <font color="red">"connections"</font> resource (base resource for dbviewer)
+      <b>/dbviewer/connections/</b>
+    %td URI of the <font color="red">"connections"</font> resource
   %tr 
-    %td http://localhost:8554<b>/dbviewer/{connectionId}</b>
+    %td <b>/dbviewer/connections/{connectionId}</b>
     %td URI of the <font color="green">"connection"</font> resource where {connectionId} represents the identifier of a connection
   %tr 
-    %td http://localhost:8554<b>/dbviewer/{connectionId}/data</b>
-    %td URI of the "data" resource
+    %td <b>/dbviewer/connections/{connectionId}/tables</b>
+    %td URI of the <font color="blue">"tables"</font> resource
+  %tr 
+    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}</b>
+    %td URI of the <font color="orange">"table"</font> resource
+  %tr 
+    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}/columns</b>
+    %td URI of the <font color="grey">"columns"</font> resource
+  %tr 
+    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}/data</b>
+    %td URI of the <font color="purple">"data"</font> resource
 
 %br
 %h2 Methods applied on each resource
@@ -47,23 +56,42 @@ layout: default
     %td Lists the current connections.
     %td done
   %tr 
-    %td <font color="red">connections</font>
+    %td 
     %td POST
     %td Creates a new user according to the data sent in the provided JSON request.
-    %td wip
+    %td done
   %tr 
     %td <font color="green">connection</font>
     %td GET
     %td Provides a representation of the connection.
     %td done
   %tr 
-    %td <font color="green">connection</font>
+    %td 
     %td PUT
     %td Updates the current connection with a new set of properties.
     %td wip
   %tr 
-    %td <font color="green">connection</font>
+    %td 
     %td DELETE
     %td Deletes the current connection.
     %td done
-
+  %tr 
+    %td <font color="blue">tables</font>
+    %td GET
+    %td Lists the tables for the current connection.
+    %td done
+  %tr 
+    %td 
+    %td POST
+    %td Creates a new table according to the data sent in the provided JSON request.
+    %td planned
+  %tr 
+    %td <font color="grey">columns</font>
+    %td GET
+    %td Lists the columns for the current table in the current connection.
+    %td wip
+  %tr 
+    %td <font color="purple">data</font>
+    %td GET
+    %td Lists the data for the table in the current connection.
+    %td wip
