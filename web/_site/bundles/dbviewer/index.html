@@ -101,37 +101,43 @@
 <table border='1' width='100%'>
   <tr style='background-color:#cccccc'>
     <th width='100'>Resource</th>
-    <th class='edit'>Method</th>
+    <th class='edit'>Http Method</th>
+    <th class='edit'>Java</th>
     <th class='edit'>Description</th>
     <th width='50'>Status</th>
   </tr>
   <tr>
     <td><font color="red">connections</font></td>
     <td>GET</td>
+    <td>ConnectionsResource#getConnections()</td>
     <td>Lists the current connections.</td>
     <td>done</td>
   </tr>
   <tr>
     <td></td>
     <td>POST</td>
+    <td>ConnectionsResource#addConnections()</td>
     <td>Creates a new user according to the data sent in the provided JSON request.</td>
     <td>done</td>
   </tr>
   <tr>
     <td><font color="green">connection</font></td>
     <td>GET</td>
+    <td>ConnectionResource#getConnection()</td>
     <td>Provides a representation of the connection.</td>
     <td>done</td>
   </tr>
   <tr>
     <td></td>
     <td>PUT</td>
+    <td>ConnectionResource#updateConnection()</td>
     <td>Updates the current connection with a new set of properties.</td>
     <td>wip</td>
   </tr>
   <tr>
     <td></td>
     <td>DELETE</td>
+    <td>ConnectionResource#deleteConnection()</td>
     <td>Deletes the current connection.</td>
     <td>done</td>
   </tr>
@@ -145,13 +151,13 @@
     <td></td>
     <td>POST</td>
     <td>Creates a new table according to the data sent in the provided JSON request.</td>
-    <td>planned</td>
+    <td>done</td>
   </tr>
   <tr>
     <td><font color="grey">columns</font></td>
     <td>GET</td>
     <td>Lists the columns for the current table in the current connection.</td>
-    <td>wip</td>
+    <td>done</td>
   </tr>
   <tr>
     <td><font color="purple">data</font></td>
