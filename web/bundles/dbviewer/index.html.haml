@@ -19,7 +19,7 @@ layout: default
 
 %table{:border => 1, :width => "100%"}
   %tr{:style => "background-color:#cccccc"}
-    %th{:width => "450"} URI
+    %th{:width => "550"} URI
     %th.edit Description
   %tr 
     %td 
@@ -27,18 +27,24 @@ layout: default
     %td URI of the <font color="red">"connections"</font> resource
   %tr 
     %td <b>/dbviewer/connections/{connectionId}</b>
-    %td URI of the <font color="green">"connection"</font> resource where {connectionId} represents the identifier of a connection
+    %td URI of the <font color="red">"connection"</font> resource where {connectionId} represents the identifier of a connection
   %tr 
-    %td <b>/dbviewer/connections/{connectionId}/tables</b>
+    %td <b>/dbviewer/connections/{connectionId}/schemas</b>
+    %td URI of the <font color="#0088CC">"schemas"</font> resource
+  %tr 
+    %td <b>/dbviewer/connections/{connectionId}/schemas/{schema}</b>
+    %td URI of the <font color="#0088CC">"schema"</font> resource
+  %tr 
+    %td <b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables</b>
     %td URI of the <font color="blue">"tables"</font> resource
   %tr 
-    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}</b>
+    %td <b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}</b>
     %td URI of the <font color="orange">"table"</font> resource
   %tr 
-    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}/columns</b>
+    %td <b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}/columns</b>
     %td URI of the <font color="grey">"columns"</font> resource
   %tr 
-    %td <b>/dbviewer/connections/{connectionId}/tables/{tablename}/data</b>
+    %td <b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}/data</b>
     %td URI of the <font color="purple">"data"</font> resource
 
 %br
@@ -64,7 +70,7 @@ layout: default
     %td Creates a new user according to the data sent in the provided JSON request.
     %td done
   %tr 
-    %td <font color="green">connection</font>
+    %td <font color="red">connection</font>
     %td GET
     %td ConnectionResource#getConnection()
     %td Provides a representation of the connection.

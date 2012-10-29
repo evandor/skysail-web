@@ -66,7 +66,7 @@
 </p>
 <table border='1' width='100%'>
   <tr style='background-color:#cccccc'>
-    <th width='450'>URI</th>
+    <th width='550'>URI</th>
     <th class='edit'>Description</th>
   </tr>
   <tr>
@@ -77,22 +77,30 @@
   </tr>
   <tr>
     <td><b>/dbviewer/connections/{connectionId}</b></td>
-    <td>URI of the <font color="green">"connection"</font> resource where {connectionId} represents the identifier of a connection</td>
+    <td>URI of the <font color="red">"connection"</font> resource where {connectionId} represents the identifier of a connection</td>
   </tr>
   <tr>
-    <td><b>/dbviewer/connections/{connectionId}/tables</b></td>
+    <td><b>/dbviewer/connections/{connectionId}/schemas</b></td>
+    <td>URI of the <font color="#0088CC">"schemas"</font> resource</td>
+  </tr>
+  <tr>
+    <td><b>/dbviewer/connections/{connectionId}/schemas/{schema}</b></td>
+    <td>URI of the <font color="#0088CC">"schema"</font> resource</td>
+  </tr>
+  <tr>
+    <td><b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables</b></td>
     <td>URI of the <font color="blue">"tables"</font> resource</td>
   </tr>
   <tr>
-    <td><b>/dbviewer/connections/{connectionId}/tables/{tablename}</b></td>
+    <td><b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}</b></td>
     <td>URI of the <font color="orange">"table"</font> resource</td>
   </tr>
   <tr>
-    <td><b>/dbviewer/connections/{connectionId}/tables/{tablename}/columns</b></td>
+    <td><b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}/columns</b></td>
     <td>URI of the <font color="grey">"columns"</font> resource</td>
   </tr>
   <tr>
-    <td><b>/dbviewer/connections/{connectionId}/tables/{tablename}/data</b></td>
+    <td><b>/dbviewer/connections/{connectionId}/schemas/{schema}/tables/{tablename}/data</b></td>
     <td>URI of the <font color="purple">"data"</font> resource</td>
   </tr>
 </table>
@@ -121,7 +129,7 @@
     <td>done</td>
   </tr>
   <tr>
-    <td><font color="green">connection</font></td>
+    <td><font color="red">connection</font></td>
     <td>GET</td>
     <td>ConnectionResource#getConnection()</td>
     <td>Provides a representation of the connection.</td>
