@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>skysail home</title>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <style type='text/css'>
+      /*<![CDATA[*/
+        body {
+          padding-top: 60px;
+        }
+      /*]]>*/
+    </style>
+    <link href='http://localhost:4242/stylesheets/styles.css' rel='stylesheet' type='text/css' />
+    <!--[if lt IE 9]>
+      <script src='//html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='navbar navbar-fixed-top'>
+      <div class='navbar-inner'>
+        <div class='container'>
+          <a class='brand' href='http://localhost:4242'>Skysail</a>
+          <ul class='nav'>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <h1>
+  <a href='../'>Technology ></a>
+  Persistence
+</h1>
+<p>
+	Persistence is managed on the server side of a skysail installation. It is utilizing eclipselink and gemini, so
+	most of the detailled technical documentation can be found on those projects.
+</p>
+<p>
+    The following paragraphs summarize the steps you have to follow in order to make a skysail server bundle able to
+    use persistent entities or to provide persistence to its entities itself.
+</p>
+<h2>
+  persistence.xml
+</h2>
+<p>
+  Put your persistence.xml file inside src/main/resources/META-INF
+</p>
+<h2>
+  pom.xml
+</h2>
+<p>
+  Make sure your maven setup copies the src/main/resources/ - directories. <br>
+  Furthermore, you will need those dependencies<br>
+  		&lt;dependency&gt;<br>
+			&lt;groupId&gt;org.eclipse.persistence&lt;/groupId&gt;<br>
+			&lt;artifactId&gt;org.eclipse.persistence.core &lt;/artifactId&gt;<br>
+		&lt;/dependency&gt;<br>
+<br>
+		&lt;dependency&gt;<br>
+			&lt;groupId&gt;org.eclipse.persistence&lt;/groupId&gt;<br>
+			&lt;artifactId&gt;org.eclipse.persistence.jpa&lt;/artifactId&gt;<br>
+		&lt;/dependency&gt;<br>
+		<br>
+		and, if you want to use derby for in memory testing:<br>
+		&lt;dependency&gt;<br>
+			&lt;groupId&gt;org.apache.derby&lt;/groupId&gt;<br>
+			&lt;artifactId&gt;derby&lt;/artifactId&gt;<br>
+			&lt;version&gt;10.8.2.2&lt;/version&gt;<br>
+			&lt;scope&gt;test&lt;/scope&gt;<br>
+		&lt;/dependency&gt;<br>
+		<br>
+  <br>
+</p>
+<h2>
+  *.bnd file
+</h2>
+<p>
+  You need the following lines
+  <br>
+  Include-Resource: {maven-resources}<br>
+  Meta-Persistence: META-INF/persistence.xml<br>
+  Import-Package: javax.persistence;jpa="2.0";version="1.1.0",\<br>
+ *<br>
+</p>
+<h2>
+  Tests
+</h2>
+<p>
+  Put a test persistence.xml file inside src/test/resources/META-INF.
+  
+  Create a junit test with a setup like<br>
+  <br>
+    @Before<br>
+    public void setUp() throws Exception {<br>
+        emf = Persistence.createEntityManagerFactory("testPU");<br>
+        user = new SkysailUser();<br>
+        ...<br>
+    }<br>
+  
+  <br>
+</p>
+      <hr />
+      <footer>
+        <p>&copy; skysail 2012</p>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+        <script src='http://localhost:4242/javascripts/bootstrap-dropdown.js' type='text/javascript'></script>
+      </footer>
+    </div>
+  </body>
+</html>

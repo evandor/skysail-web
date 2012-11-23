@@ -22,6 +22,12 @@
         <div class='container'>
           <a class='brand' href='http://localhost:4242'>Skysail</a>
           <ul class='nav'>
+            <li>
+              <a href='http://localhost:4242'>Home</a>
+            </li>
+            <li>
+              <a href='http://localhost:4242/news/'>News</a>
+            </li>
             <li class='dropdown' id='getting-started-menu'>
               <a class='dropdown-toggle' data-toggle='dropdown' href='#getting-started-menu'>
                 Bundles
@@ -45,44 +51,28 @@
     </div>
     <div class='container'>
       <h1>
-        Bundles >
-        <a href='../bundles'>General</a>
-      </h1>
-      All skysail bundles share the same layout:
+  Bundles >
+  <a href='../bundles'>General ></a>
+  src/main/resources
+</h1>
+The pom files of skysail bundles usually have a similar layout the main sections of
+which are described here in more detail:
+<p></p>
+<p>
+  The parent pom:
+</p>
+<div class='row'>
+  <div class='span12'>
+    <div class='well'>
+      <h2>
+        project.properties
+      </h2>
       <p>
-        <h2>src/main/java</h2>
-        Java source files, typically in packages starting with "de.twenty11.[symbolic name]".
+        <pre><code># http://stackoverflow.com/questions/3697449/retrieve-version-from-maven-pom-xml-in-code&#x000A;project.version.from.pom=${project.version}&#x000A;</code></pre>
       </p>
-      <p>
-        <h2>
-          <a href='src_main_resources.html'>src/main/resources</a>
-        </h2>
-      </p>
-      <p>
-        <h2>
-          <a href='src_test_java.html'>src/test/java</a>
-        </h2>
-      </p>
-      <p>
-        <h2>
-          <a href='src_test_resources.html'>src/test/resources</a>
-        </h2>
-      </p>
-      <p>
-        <h2>
-          <a href='bnd.html'>osgi.bnd</a>
-        </h2>
-        this file instructs the maven bundle plugin with details about the OSGi build process.
-      </p>
-      <p>
-        <h2>
-          <a href='pom.html'>pom.xml</a>
-        </h2>
-        skysail bundles are build using
-        <a href='http://maven.apache.org' target='_blank'>maven 3</a>
-        ; everything maven needs to know about the project
-        is defined in this file. To install the projects, simply type "mvn clean install".
-      </p>
+    </div>
+  </div>
+</div>
       <hr />
       <footer>
         <p>&copy; skysail 2012</p>
