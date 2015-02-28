@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to skysail</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-58670225-1', 'auto');
+		  ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-color: #fff;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background-color: #000;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">
+                    <i class="fa fa-play-circle"></i>  <span class="light">skysail</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#learnmore">Tutorial</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section id="learnmore" class="content-section text-center" style="padding-top: 104px;">
+    <div class="container-fluid" style="color: #000; text-align: justify;">
+
+<div class="row">
+	<div class="col-md-2">
+            <a href="/tutorialM2R" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;background-color:#000066;color:white"><span style="text-decoration: none;"><b>Getting Started</b></span></a><br>
+      
+
+            <a href="/tutorialM2R/step1" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">1. Create Model</span></a><br>
+      
+
+            <a href="/tutorialM2R/step2" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">2. Add Validation</span></a><br>
+      
+
+            <a href="/tutorialM2R/step3" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">3. Add Persistence</span></a><br>
+      
+
+            <a href="/tutorialM2R/step4" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">4. Check Sanitization</span></a><br>
+      
+
+            <a href="/tutorialM2R/step5" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">5. Extend Model</span></a><br>
+      
+
+            <a href="/tutorialM2R/step6" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">6. Check Integration</span></a><br>
+      
+
+            <a href="/tutorialM2R/conclusion" class="btn btn-link btn-sm" role="button" style="max-width:110px;margin-bottom:6px;text-align: left;padding: 0px 2px;"><span style="text-decoration: underline;">Conclusion</span></a><br>
+      
+</div>
+	<div class="col-md-7">
+
+		<!-- contentHeader -->
+		<h3>Getting Started Guide - An intro example for skysail</h3>
+		<p>This guide will help you understand what skysail is about and how to get your feet wet with its concepts.</p>
+		<p>As syksail is about <strong>creating RESTful applications from domain models</strong>, we'll show you how a simple &ldquo;todo&rdquo; model is extended in six steps to create a running Todo-List application, including validation and persistence.</p>
+		<p>You don't need to download anything to follow this guide; simply have a look at the models and, if you like, launch the corresponding applications for each step.</p>
+		<h4>The final Model</h4>
+		<p><img src="img/TodoModel.png" alt="TodoModel" /></p>
+		<h4>Resources</h4>
+		<p>To be honest, you need a little bit more than just a model or two to create a useful application. Some glue code is needed to make your model instances behave the way you want. Initially, this code can be generated. Once you need more sophisticated logic, you'll take over.</p>
+		<h4>The user interface</h4>
+		<p>skysails user interface is purely generic and meant to be used by admins, developers and support staff. If you need a client GUI, try some of the fancy javascript frameworks (or anything that supports HTTP) and communicate with the skysail server backend via JSON.</p>
+
+
+		<!-- contentHeader -->
+		<h3>Create Model</h3>
+		<h4>Model Definition</h4>
+		<p>Let's start with a very simple model:</p>
+		<pre><code>public class TodoModel1 {         // 1
+
+		    @Field                        // 2
+		    private String todo;     
+
+		    (getter and setter omitted)   // 3
+		}
+		</code></pre>
+		<ol>
+		<li>As you can see, the model <em>is</em> a POJO, a plain old simple java object without any dependencies. <em>The model does not need to extend or implement any framework class</em>.</li>
+		<li>What skysail needs, though, is an annotation to understand that this special field (&ldquo;todo&rdquo;) needs to be handled in a specific way.</li>
+		<li>The next examples will make use of <a href="http://projectlombok.org/">lombok</a> to avoid writing some boilerplate code like getters and setters. Technically, skysail doesn't need lombok, but its convenient. You still can write setters and getters by hand of course.</li>
+		</ol>
+		<hr />
+		<h4>Resulting Application</h4>
+		<p>skysail creates a RESTful application for your model. So, under &ldquo;Demo Application&rdquo;, click the &ldquo;Launch&rdquo; link to see the current model &ldquo;in action&rdquo;. Not much has yet been defined on your model, so you can <em>submit</em> the form, but nothing will happen yet.</p>
+
+
+
+		      <!-- contentHeader -->
+		<h3>Add Validation</h3>
+		<p>Models need validation - not all values and their combinations are valid in a specific context. skysail helps you defining constraints using the <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303</a> standard. Simple predefined constraints can be applied on the field level; more complex ones can be written for the entire bean.</p>
+		<h4>Model Definition</h4>
+		<p>So, let's extend our little model to look like this:</p>
+		<pre><code>@Data                            // 1
+		public class TodoModel2 {        // 2
+
+		    @Field
+		    @Size(min = 3)               // 3    
+		    private String todo;
+
+		}
+		</code></pre>
+		<ol>
+		<li>This is a lombok annotation helping us to write less boilerplate code; as explained in <a href="step1">Step 1</a> this is not mandatory but convenient.</li>
+		<li>The extended model, with some <em>javax.validation</em> annotations.</li>
+		<li>The actual annotation, letting skysail know that the todo attribute must be a least three characters long.</li>
+		</ol>
+		<hr />
+		<h4>Resulting Application</h4>
+		<p>Check it out: click on the &ldquo;Launch&rdquo; link and try to create a new Todo with value &ldquo;A&rdquo;.</p>
+
+
+		<!-- contentHeader -->
+		<h3>Persistence</h3>
+		<p>Models which cannot be persisted usually are of little value, at least when it comes to business models. skysail helps you with creating, retrieving, altering and deleting your model instances. The best thing about our approach is this: If your models are simple enough, you don't have to write anything to be able to persist them. Ok, cheated&hellip; You have to give them an ID field ;)</p>
+		<h4>Model Definition</h4>
+		<p>So, we'll add an ID field to the business model we have shown in <a href="step2">step 2</a>:</p>
+		<pre><code>@Data                            
+		public class TodoModel2 {        
+
+		    @Id                          // 1
+		    private int id;              // 2
+
+		    @Field
+		    @Size(min = 3)                   
+		    private String todo;
+		}
+		</code></pre>
+		<ol>
+		<li>An &ldquo;ordinary&rdquo; javax.persistence ID annotation</li>
+		<li>A new field holding the models id. Please note that it is not annotated with @Field,so it will not show up in the form.</li>
+		</ol>
+		<p>Of course, we need some code to actually persist the model. For now,the repository code is not much more than a simple CircularFifoQueue, limited to five items.</p>
+		<hr />
+		<h4>Resulting Application</h4>
+		<p>By now, we can create new Todo instances which are persisted - check it out.</p>
+
+
+
+
+		      <!-- contentHeader -->
+		<h3>Sanitization</h3>
+		<p>Again, we'll change the model in this step a little bit to show you some more of the concepts:</p>
+		<pre><code>@Data
+		public class TodoModel4 {
+
+		    @Id
+		    private int id; 
+
+		    @Field(htmlPolicy = HtmlPolicy.NO_HTML,type = InputType.TEXTAREA)    // 1 and 2
+		    private String todo;
+
+		}
+		</code></pre>
+		<ol>
+		<li>The htmlPolicy defines how user input is handled (or sanitized). skysail will try to remove malicious input according to this policy. The default is &ldquo;NO_HTML&rdquo;.</li>
+		<li>The default value for the @Field attribute &ldquo;type&rdquo; is text - we'll change this here to show you how to create a textarea.</li>
+		</ol>
+		<h4>Resulting Application</h4>
+		<p>Try to add simple html in this textarea and see what happens. And try writing some javascript as well.</p>
+		<hr />
+
+
+				      <!-- contentHeader -->
+		<h3>Extend Model</h3>
+		<h4>Model Definition</h4>
+		<p>In this step we will extend the model to its final version in this tutorial and reuse it in the steps to come.</p>
+		<p>Let's add a Due-Date-Field and a (calculated) State field, indicating if the Todo is new, pending, done or overdue.</p>
+		<pre><code>@Data
+		public class TodoModel {
+
+		    @Id
+		    private int id; 
+
+		    @Field
+		    @Size(min = 3)
+		    private String todo;
+
+		    @Field(type = InputType.TEXTAREA)
+		    private String desc;
+
+		    @Field
+		    private Date due;
+
+		    private State state;
+		}
+		</code></pre>
+		<h4>Resulting Application</h4>
+		<p>Launch it!</p>
+		<hr />
+
+
+		      <!-- contentHeader -->
+		<h3>Check Integration</h3>
+		<p>If an application is only accessible with a browser, you loose a lot of opportunities for decent integration with other applications. So, while skysail provides a generic GUI to interact with your model instances, skysail also let's you interact via JSON without any additional effort.</p>
+		<h4>Json Post</h4>
+		<p>The simplest integration setup is to utilize curl to send a new Todo to the skysail server like this:</p>
+		<pre><code>curl -H "Content-Type: application/json" -d '{"todo":"xyz","desc":"mydesc"}' http://www.skysail.io/tutorialM2R/step5/
+		</code></pre>
+		<p>If you have curl installed, you can run this from the command line and you will see (once the page has been refreshed) a new entry in the JSON Get representation below.</p>
+		<h4>Json Get</h4>
+
+
+		      <!-- contentHeader -->
+		<h3>Conclusion</h3>
+		<p>We hope you got an idea of what skysail is about. But we're just getting started&hellip; There are a lot of topics we didn't cover yet. Some of them are already being tackled, others are on the roadmap.</p>
+		<h4>User Management</h4>
+		<p>A proper Todo Application needs some kind of user management - who is the owner of a Todo, who is currently responsible, who has access to which Todos and the like. We will provide a Todo Demo Application to show you how these issues can be handled with skysail.</p>
+		<p><em>Status</em>: Proof of concept</p>
+		<h4>Documentation</h4>
+		<p>skysail exposes models as RESTful applications; that means you get an API which let's you interact with the models. This API needs documentation to be truely useful, and this documentation can be generated automatically from the information on the model.</p>
+		<p><em>Status</em>: Proof of concept</p>
+		<h4>Configuration</h4>
+		<p>An application needs to be configured - where is the database, how to access the mail server, what port should it run at and so on.</p>
+		<p><em>Status</em>: alpha</p>
+
+  <br>
+	</div>
+	<div class="col-md-1">&nbsp;</div>
+	<div class="col-md-2">
+		<span class="label label-success" style="font-size:100%">Code</span> <br>
+		<br>
+		<p>This is where you will find all the code snippets used in each of the following steps.</p>
+        <p>The complete code for this tutorial can be found at 
+          <a href='https://github.com/evandor/skysail/tree/master/skysail.server.app.tutorial.model2rest/src/de/twenty11/skysail/server/app/tutorial/model2rest'>github</a>.
+        </p>
+		<hr>
+		<span class="label label-info" style="font-size:100%">Good to know...</span> <br>
+		<br>
+		<p>
+			See every stage of the application in action! Use the "<i>launch demo</i>" button on every of the following pages. 
+		</p>
+
+<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+			Maybe you wonder where all the text and labels in the demo applications come from? They are
+			defined in a <a
+				href='https://github.com/evandor/skysail/tree/master/skysail.server.app.tutorial.model2rest/resources/translations'>resource
+				bundle</a>, the classic approach in java for internationalization, aka
+			i18n.
+		</p>
+
+		<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+			skysail is not about the GUI, but there is a generic User Interface
+			which is created with <a href='http://www.stringtemplate.org' target="_blank">stringtemplate</a>.
+			The relevant files can be found in the <a href='https://github.com/evandor/skysail/tree/master/skysail.server.app.tutorial.model2rest/src/de/twenty11/skysail/server/app/tutorial/model2rest/step1/'>*Stg-Folders</a>.
+			As long as you are happy with the generic layout, you don't have to
+			write any html for the generated application - but you could.
+		</p>
+
+		<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+			Seems like the guys at <a href='http://isis.apache.org' target='_blank'>Apache Isis</a> and at <a href='http://restlet.com/products/apispark/' target='_blank'>API Spark</a> are
+			doing something quite similar.... working on a comparison matrix, stay <a href='https://twitter.com/skysailserver' target='_blank'>tuned</a> ;)
+		</p>
+
+		<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+		  Of course skysail implements a user management and security scheme, but to actually see that you'd have to 
+		  register. If you like to register once this will be available, check our <a href='https://twitter.com/skysailserver' target='_blank'>twitter</a> account.
+		</p>
+
+		<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+			skysail is about integration: Create easily an AngularJS frontend which communicates with the skysail backend via JSON.
+			Or write a .Net GUI. Or get mobile. Or setup an eclipse richt client. Or simply use the browser...
+		</p>
+
+		<hr>
+		<span class="label label-info" style="font-size:110%">Good to know...</span> <br>
+		<br>
+		<p>
+			We are happy about feedback! 
+			<br><br>
+			Drop us an email: <a href="mailto:hello@skysail.io?subject=A question about skysail">hello@skysail.io</a>
+			<br><br>
+			There is much more in the pipeline... stay tuned on
+			<a href="https://twitter.com/skysailserver">Twitter</a>.
+		</p>
+
+
+
+
+	</div>
+</div>
+
+
+  </div>
+    </div>
+	</section>    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> in Munich &copy; 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
